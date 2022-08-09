@@ -1,3 +1,3 @@
-# Muinikinarai
+# MuiNiKinAri
 มื้อนี้กินอะไร
 อยากกินไข่ตุ๋น
