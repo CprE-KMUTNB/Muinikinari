@@ -1,0 +1,172 @@
+/*ตกแต่งตัวSlider(องค์ประกอบของหน้าRecommend)*/
+* {
+    margin: 0;
+    padding: 0;
+}
+$Poppins: 'Poppins',sans-serif;
+body {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    font-family: $Poppins;
+    background: -moz-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+}
+
+/*หัวข้อRecommend*/
+.slider_title{
+    font-size: 50px;
+    letter-spacing: -0.017em;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2vw;
+}//slider_title
+
+.card-wrapper{
+    position: relative;
+    width: 100%;
+    padding: 0 30px;
+    box-sizing: border-box;
+    &:active,&:hover,&:focus{
+        outline: none;
+        border: none;
+    }
+}//card-wrapper
+
+/*กำหนดขนาดกรอบ ตกแต่งกรอบ ของภาพอาหาร ลูกเล่นตอนเลื่อน*/
+.card{
+    width: 100%;
+    height: 550px;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    .card-image{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background-color: #000;
+        transition: .5s;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }//card-image
+    &:hover{
+        img{
+            opacity: .4;
+            transition: .5s;
+        }
+        .card-image{
+            transform: translateY(-100px);
+            transition: all .9s;
+        }
+    }
+}//card
+/*
+.card:hover li:nth-child(1) a{
+    transition-delay: .1s;
+}
+.card:hover li:nth-child(2) a{
+    transition-delay: .2s;
+}
+.card:hover li:nth-child(3) a{
+    transition-delay: .3s;
+}
+.card:hover li:nth-child(4) a{
+    transition-delay: .4s;
+}
+*/
+/*กำหนดขนาดของกล่องข้อความ และข้อความที่จะแสดงตอนชี้ที่รูป*/
+.details{
+    position: absolute;
+    bottom: 400px;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    height: 120px;
+    z-index: 1;
+    padding: 10px;
+    transition: .6s;
+    h2{
+        margin: 30px 0;
+        padding: 0;
+        text-align: center;
+        .restaurant-title{
+            font-family: $Poppins;
+            font-size: 20px;
+            line-height: 2;
+            color: #000;
+            font-weight: 300;
+            display: block;
+        }
+    }
+}
+
+/*แสดงผลกล่องข้อความใต้รูป*/
+.card:hover{
+    .details{
+        bottom: 0;
+    }
+}
+
+/*slick-dotsจุดบอกลำดับใต้รูป, slickอื่นๆคือลูกศรเลื่อนซ้ายขวา*/
+.carousel{
+    .slick-dots{
+        bottom: -2.5vw;
+        il{
+            buttom{
+                width: 20px;
+                height: 20px;
+                border: 1px solid #fff;
+                border-radius: 20px;
+                &:before{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 10px;
+                    content: '';
+                    text-align: center;
+                    opacity: .5;
+                    color: #000;
+                    background-color: #fff;
+                    transform: translate(-50%,-50%);
+                    transition: all .3s ease-in-out;
+                }
+            }
+            &.slick-active,
+            &:hover{
+                button{
+                    border-color: tomato;
+                    &:before{
+                        background-color: tomato;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    .slick-prev, .slick-next{
+        width:50px;
+        height: 50px;
+        background-color: #fff;
+    }
+    .slick-prev:hover,.slick-prev:focus,.slick-next:hover,.slick-next:focus{
+        color: #fff;
+        outline: none;
+        background: #fff;
+    }
+    .slick-prev:before,.slick-next:before{
+        color: #000;
+        font-family: $Poppins;
+    }
+    
+}
