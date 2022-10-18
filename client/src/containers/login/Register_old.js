@@ -1,13 +1,16 @@
 import React from 'react'
 import { useState } from 'react';
 
+import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
+import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 
@@ -15,9 +18,6 @@ import ReactDOM from 'react-dom/client';
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import { useNavigate } from 'react-router-dom'
-
-import sweetcorn from '../../assets/sweetcorn.png'
-
 
 function Register() {
     const navigate = useNavigate()
@@ -76,24 +76,25 @@ function Register() {
   return (
     <div>
         <Container component="main" maxWidth="xs">
+        <CssBaseline />
         <Box
           sx={{
             marginTop: 8,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            color: 'white',
           }}
         >
-          <img src={sweetcorn} alt='sweetcorn' height="170"/>
-          <Typography component="h1" variant="h5" color="#E7B925" fontFamily={'Poppins'} fontWeight='700' fontSize='30px'>
+          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+            <LockOutlinedIcon />
+          </Avatar>
+          <Typography component="h1" variant="h5">
             Register
           </Typography>
           <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
-                InputLabelProps={{style: {fontFamily: 'Poppins' ,color: 'white', fontSize:'20px'}}}
                   autoComplete="given-name"
                   name="fname"
                   required
@@ -107,7 +108,6 @@ function Register() {
               </Grid>
               <Grid item xs={12} sm={6}>
                 <TextField
-                InputLabelProps={{style: {fontFamily: 'Poppins' ,color: 'white', fontSize:'20px'}}}
                   required
                   fullWidth
                   id="lname"
@@ -120,7 +120,6 @@ function Register() {
               </Grid>
               <Grid item xs={12} sm={6}>
                 <TextField
-                InputLabelProps={{style: {fontFamily: 'Poppins' ,color: 'white', fontSize:'20px'}}}
                   required
                   fullWidth
                   id="username"
@@ -133,7 +132,6 @@ function Register() {
               </Grid>
               <Grid item xs={12}>
                 <TextField
-                InputLabelProps={{style: {fontFamily: 'Poppins' ,color: 'white', fontSize:'20px'}}}
                   required
                   fullWidth
                   name="password"
@@ -147,7 +145,6 @@ function Register() {
               </Grid>
               <Grid item xs={12}>
                 <TextField
-                InputLabelProps={{style: {fontFamily: 'Poppins' ,color: 'white', fontSize:'20px'}}}
                   required
                   fullWidth
                   id="email"
@@ -160,7 +157,6 @@ function Register() {
               </Grid>
               <Grid item xs={12} sm={6}>
                 <TextField
-                InputLabelProps={{style: {fontFamily: 'Poppins' ,color: 'white', fontSize:'20px'}}}
                   required
                   fullWidth
                   id="avatar"
@@ -173,25 +169,16 @@ function Register() {
               </Grid>
             </Grid>
             <Button
-    style={{
-        borderRadius: 35,
-        backgroundColor: "#E7B925",
-        padding: "18px 36px",
-        fontSize: "25px",
-        fontFamily: 'Poppins',
-        fontWeight: '700',
-        color: 'black'
-    }}
-    type="submit"
+              type="submit"
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
-    >
+            >
               Register
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="/login" variant="body2" color="#A8FFF8" fontFamily={'Poppins'} fontWeight='500' fontSize='17px'>
+                <Link href="/" variant="body2">
                   Already have an account? Login
                 </Link>
               </Grid>

@@ -1,19 +1,23 @@
 import React from 'react'
 import { useState } from 'react';
 
+import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
+import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import { useNavigate } from 'react-router-dom'
-import padthaikung from '../../assets/padthaikung.png'
-
 
 function Login() {
     const navigate = useNavigate()
@@ -36,7 +40,7 @@ function Login() {
     var raw = JSON.stringify({
   "username": inputs.username,
   "password": inputs.password,
-  "expiresIn": 6000000
+  "expiresIn": 600000
 });
 
     var requestOptions = {
@@ -72,22 +76,23 @@ function Login() {
   return (
     <div>
         <Container component="main" maxWidth="xs">
+        <CssBaseline />
         <Box
           sx={{
             marginTop: 8,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            color: 'white',
           }}
         >
-          <img src={padthaikung} alt='padthaikung' />          
-          <Typography component="h1" variant="h5" color="#E7B925" fontFamily={'Poppins'} fontWeight='700' fontSize='30px'>
-          Welcome to MuiNiKinAri
+          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+            <LockOutlinedIcon />
+          </Avatar>
+          <Typography component="h1" variant="h5">
+            Sign in
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             <TextField
-              InputLabelProps={{style: {fontFamily: 'Poppins' ,color: 'white', fontSize:'20px'}}}
               margin="normal"
               required
               fullWidth
@@ -100,7 +105,6 @@ function Login() {
               onChange={handleChange}
             />
             <TextField
-              InputLabelProps={{style: {fontFamily: 'Poppins' ,color: 'white', fontSize:'20px'}}}
               margin="normal"
               required
               fullWidth
@@ -113,28 +117,19 @@ function Login() {
               onChange={handleChange}
             />
 
-<Button
-    style={{
-        borderRadius: 35,
-        backgroundColor: "#E7B925",
-        padding: "18px 36px",
-        fontSize: "25px",
-        fontFamily: 'Poppins',
-        fontWeight: '700',
-        color: 'black'
-    }}
-    type="submit"
+            <Button
+              type="submit"
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
-    >
-    Login
-</Button>
+            >
+              Login
+            </Button>
             <Grid container>
               <Grid item xs>
               </Grid>
               <Grid item>
-                <Link href="/register" variant="body2" color="#A8FFF8" fontFamily={'Poppins'} fontWeight='500' fontSize='17px'>
+                <Link href="/register" variant="body2">
                   {"Don't have an account? Register"}
                 </Link>
               </Grid>

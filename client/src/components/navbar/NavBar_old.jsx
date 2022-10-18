@@ -27,7 +27,8 @@ const NavBar = () => {
         </div>
       </div>
       <div className='navbar-sign'>
-      <button><Link to='/login'>Login</Link></button>
+      <p>Sign in</p>
+      <button type='button'>Sign up</button>
     </div>
     <div className='navbar-menu'>
       {toggleMenu 
@@ -39,7 +40,8 @@ const NavBar = () => {
           <div className='navbar-menu_container-links'>
           <Menu />
           <div className='navbar-menu_container-links-sign'>
-          <button><Link to='/login'>Login</Link></button>
+          <p>Sign in</p>
+      <button type='button'>Sign up</button>
     </div>
           </div>
         </div>
