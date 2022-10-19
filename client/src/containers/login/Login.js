@@ -46,7 +46,7 @@ function Login() {
   redirect: 'follow'
 };
 
-    fetch("https://www.melivecode.com/api/login", requestOptions)
+    fetch("http://localhost:8000/api/login", requestOptions)
   .then(response => response.json())
   .then(result => {
     console.log(result)

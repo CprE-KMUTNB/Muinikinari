@@ -53,7 +53,7 @@ function Register() {
   redirect: 'follow'
 };
 
-    fetch("https://www.melivecode.com/api/users/create", requestOptions)
+    fetch("http://localhost:8000/api/register", requestOptions)
   .then(response => response.json())
   .then(result => {
     if (result.status == 'ok') {
