@@ -52,7 +52,7 @@ function Login() {
     console.log(result)
     if (result.jwt) {
         MySwal.fire({
-            html: <i>{result.message}</i>,
+            html: <i>login completed successfully</i>,
             icon: 'success'
           }).then((value) => {
             localStorage.setItem('token', result.accessToken)

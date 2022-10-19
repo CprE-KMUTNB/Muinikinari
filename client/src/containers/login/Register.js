@@ -38,9 +38,9 @@ function Register() {
     myHeaders.append("Content-Type", "application/json");
 
     var raw = JSON.stringify({
-  "fname": inputs.fname,
-  "lname": inputs.lname,
-  "username": inputs.username,
+  "first_name": inputs.first_name,
+  "last_name": inputs.last_name,
+  "name": inputs.name,
   "password": inputs.password,
   "email": inputs.email,
   //"avatar": inputs.avatar
@@ -56,9 +56,9 @@ function Register() {
     fetch("http://localhost:8000/api/register", requestOptions)
   .then(response => response.json())
   .then(result => {
-    if (result.status == 'ok') {
+    if (result.id) {
         MySwal.fire({
-            html: <i>{result.message}</i>,
+            html: <i>registration completed successfully</i>,
             icon: 'success'
         }).then((value) => {
             navigate('/')
@@ -95,13 +95,13 @@ function Register() {
                 <TextField
                 InputLabelProps={{style: {fontFamily: 'Poppins' ,color: 'white', fontSize:'20px'}}}
                   autoComplete="given-name"
-                  name="fname"
+                  name="first_name"
                   required
                   fullWidth
-                  id="fname"
+                  id="first_name"
                   label="First Name"
                   autoFocus
-                  value={inputs.fname || ""} 
+                  value={inputs.first_name || ""} 
                   onChange={handleChange}
                 />
               </Grid>
@@ -110,11 +110,11 @@ function Register() {
                 InputLabelProps={{style: {fontFamily: 'Poppins' ,color: 'white', fontSize:'20px'}}}
                   required
                   fullWidth
-                  id="lname"
+                  id="last_name"
                   label="Last Name"
-                  name="lname"
+                  name="last_name"
                   autoComplete="family-name"
-                  value={inputs.lname || ""} 
+                  value={inputs.last_name || ""} 
                   onChange={handleChange}
                 />
               </Grid>
@@ -123,11 +123,11 @@ function Register() {
                 InputLabelProps={{style: {fontFamily: 'Poppins' ,color: 'white', fontSize:'20px'}}}
                   required
                   fullWidth
-                  id="username"
+                  id="name"
                   label="UserName"
-                  name="username"
-                  autoComplete="username"
-                  value={inputs.username || ""} 
+                  name="name"
+                  autoComplete="name"
+                  value={inputs.name || ""} 
                   onChange={handleChange}
                 />
               </Grid>
