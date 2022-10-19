@@ -34,7 +34,7 @@ function Login() {
     myHeaders.append("Content-Type", "application/json");
 
     var raw = JSON.stringify({
-  "username": inputs.username,
+  "email": inputs.email,
   "password": inputs.password,
   "expiresIn": 6000000
 });
@@ -50,7 +50,7 @@ function Login() {
   .then(response => response.json())
   .then(result => {
     console.log(result)
-    if (result.status === 'ok') {
+    if (result.jwt) {
         MySwal.fire({
             html: <i>{result.message}</i>,
             icon: 'success'
@@ -91,12 +91,12 @@ function Login() {
               margin="normal"
               required
               fullWidth
-              id="username"
-              label="Username"
-              name="username"
-              autoComplete="username"
+              id="email"
+              label="Email"
+              name="email"
+              autoComplete="email"
               autoFocus
-              value={inputs.username || ""} 
+              value={inputs.email || ""} 
               onChange={handleChange}
             />
             <TextField

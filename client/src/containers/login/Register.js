@@ -43,7 +43,7 @@ function Register() {
   "username": inputs.username,
   "password": inputs.password,
   "email": inputs.email,
-  "avatar": inputs.avatar
+  //"avatar": inputs.avatar
 });
 
     var requestOptions = {
@@ -158,19 +158,7 @@ function Register() {
                   onChange={handleChange}
                 />
               </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                InputLabelProps={{style: {fontFamily: 'Poppins' ,color: 'white', fontSize:'20px'}}}
-                  required
-                  fullWidth
-                  id="avatar"
-                  label="Avatar"
-                  name="avatar"
-                  autoComplete="avatar"
-                  value={inputs.avatar || ""} 
-                  onChange={handleChange}
-                />
-              </Grid>
+             
             </Grid>
             <Button
     style={{
