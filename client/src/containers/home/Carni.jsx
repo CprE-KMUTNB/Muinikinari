@@ -17,7 +17,7 @@ const Carni = () => {
                 </div>
                 <div className='carni-content__space'></div>
             <h1 className='carni__text'>The number of people:</h1>
-            <p>On a budget:</p>
+            <p>Budget per person:</p>
             <div className='carni-content__start'>
             <button><Link to='/carni'>Start</Link></button>
             </div>

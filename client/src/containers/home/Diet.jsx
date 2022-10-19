@@ -17,7 +17,7 @@ const Diet = () => {
                 </div>
                 <div className='diet-content__space'></div>
             <h1 className='diet__text'>The number of people:</h1>
-            <p>On a budget:</p>
+            <p>Budget per person:</p>
             <div className='diet-content__start'>
             <button><Link to='/normal'>Start</Link></button>
             </div>

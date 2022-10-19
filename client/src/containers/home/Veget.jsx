@@ -16,7 +16,7 @@ const Veget = () => {
                 </div>
                 <div className='veget-content__space'></div>
             <h1 className='veget__text'>The number of people:</h1>
-            <p>On a budget:</p>
+            <p>Budget per person:</p>
             <div className='veget-content__start'>
             <button><Link to='/veget'>Start</Link></button>
             </div>
