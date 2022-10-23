@@ -55,8 +55,8 @@ function Login() {
             html: <i>login completed successfully</i>,
             icon: 'success'
           }).then((value) => {
-            localStorage.setItem('token', result.accessToken)
-            navigate('/profile')
+            localStorage.setItem('token', result.jwt)
+            navigate('/')
           })
     } else {
         MySwal.fire({
