@@ -16,7 +16,6 @@
 
 .veget-content__input {
     width: 100%;
-    margin: -10rem 0 1rem;
 
     display: flex;
 }
@@ -31,7 +30,7 @@
     border-color: #ffffff;
     font-family: 'Poppins';
     font-weight: 700;
-    font-size: 17px;
+    font-size: 23px;
     line-height: 30px;
 
     letter-spacing: -0.017em;
@@ -78,9 +77,8 @@
 /*ช่องว่างระหว่างThe number of กับปุ่ม Start*/
 .veget-content__start {
     width: 100%;
-    margin: 5rem 0 1rem;
-
     display: flex;
+    margin: -7rem 0 1rem;
 }
 
 .veget-content__start button {
@@ -119,7 +117,7 @@
 .veget-image-top {
     padding-top: 0px; 
     padding-right: 20%; 
-    padding-left: 27px;
+    padding-left: 1px;
     width: 100%; 
     z-index: 0;
 }
@@ -136,6 +134,23 @@
 
 }
 
+.form-control {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 20px;
+    min-width: 15em;
+    position: relative;
+    margin: 2em;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid;
+    border-radius: 0;
+    padding: 1em;
+    cursor: pointer;
+    left: 56%;
+    bottom: 15%;
+    
+}
 @media screen and (max-width: 1050px) {
     .veget {
         flex-direction: column;
