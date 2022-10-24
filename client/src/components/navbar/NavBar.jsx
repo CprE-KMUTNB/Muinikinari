@@ -43,7 +43,7 @@ const NavBar = () => {
       {
               auth ? 
                 <div className='navbar-links_container'>
-                  <button><Link to='/logout'>Log</Link></button>
+                  <button><Link to='/logout'>Logout</Link></button>
 
                   <button onClick={toggleNavbar}>
                   </button>
