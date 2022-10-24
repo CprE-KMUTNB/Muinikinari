@@ -5,6 +5,7 @@ import './navbar.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { isLoggedIn } from '../../containers/login/auth';
 
+
 const Menu = () => (
   <>
   <p><Link className='navbar-links_container' to='/'>Home</Link></p>
@@ -43,6 +44,7 @@ const NavBar = () => {
      
       <div className='navbar-sign'>
       {!isLoggedIn() && ( <button><Link to='/login'>Login</Link></button>)}
+      {isLoggedIn() && ( <button onClick={logout}>logout</button>)}
     </div>
     <div className='navbar-menu'>
       {toggleMenu 
@@ -56,7 +58,7 @@ const NavBar = () => {
           <div className='navbar-menu_container-links-sign'>
           
           {!isLoggedIn() && ( <button><Link to='/login'>Login</Link></button>)}
-          {isLoggedIn() && ( <button onClick={logout}>logout</button>)}
+          
     </div>
     
           </div>
