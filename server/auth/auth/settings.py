@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     'corsheaders',
     'users',
     'random_menu',
+    'random_menu.apps.random_menuConfig',
     'review',
+    'review.apps.reviewConfig',
 ]
 
 MIDDLEWARE = [
@@ -78,6 +80,9 @@ WSGI_APPLICATION = 'auth.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
+
+import pymysql
+pymysql.install_as_MySQLdb()
 
 DATABASES = {
     'default': {
