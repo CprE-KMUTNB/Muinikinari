@@ -70,7 +70,7 @@ const NavBar = () => {
           <div className='navbar-menu_container-links-sign'>
           
           {!isLoggedIn() && ( <button><Link to='/login'>Login</Link></button>)}
-          
+          {isLoggedIn() && ( <button onClick={logout}>logout</button>)}
     </div>
     
           </div>
