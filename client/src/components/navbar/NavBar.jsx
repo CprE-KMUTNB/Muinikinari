@@ -22,6 +22,10 @@ const NavBar = () => {
     nevigate('/login')
     
   }   
+  const [openLinks, setOpenLinks]=useState(false);
+  const toggleNavbar =() =>{
+    setOpenLinks(!openLinks);
+  };
   
 
   return (
@@ -36,6 +40,21 @@ const NavBar = () => {
           <p><Link className='navbar-links_container' to='/review'>Get reviews</Link></p>
         </div>
       </div>
+      {
+              auth ? 
+                <div className='navbar-links_container'>
+                  <button><Link to='/logout'>Log</Link></button>
+
+                  <button onClick={toggleNavbar}>
+                  </button>
+                
+                </div>
+                : 
+                <div className='navbar-links_container'>
+                  <button onClick={toggleNavbar}>
+                  </button>
+                </div>
+        }
       <div className='navbar-sign'>
       {!isLoggedIn() && ( <button><Link to='/login'>Login</Link></button>)}
     </div>
