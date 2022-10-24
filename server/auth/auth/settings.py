@@ -41,9 +41,9 @@ INSTALLED_APPS = [
     'corsheaders',
     'users',
     'random_menu',
-    'random_menu.apps.random_menuConfig',
+    ##'random_menu.apps.random_menuConfig',
     'review',
-    'review.apps.reviewConfig',
+    ##'review.apps.reviewConfig',
 ]
 
 MIDDLEWARE = [
