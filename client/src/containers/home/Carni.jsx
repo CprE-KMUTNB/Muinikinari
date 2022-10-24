@@ -16,8 +16,8 @@ const Carni = () => {
                 <button><Link to='/diet'>Diet food</Link></button>
                 </div>
                 <div className='carni-content__space'></div>
-            <h1 className='carni__text'>The number of people:</h1>
-            <p>Budget per person:</p>
+            <h1 className='carni__text'>Seats per table:</h1>
+            <p>Food price:</p>
             <div className='carni-content__start'>
             <button><Link to='/carni'>Start</Link></button>
             </div>

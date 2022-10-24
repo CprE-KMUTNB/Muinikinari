@@ -16,8 +16,8 @@ const Diet = () => {
                 <button><Link to='/carni'>Carnivore diet food</Link></button>
                 </div>
                 <div className='diet-content__space'></div>
-            <h1 className='diet__text'>The number of people:</h1>
-            <p>Budget per person:</p>
+            <h1 className='diet__text'>Seats per table:</h1>
+            <p>Food price:</p>
             <div className='diet-content__start'>
             <button><Link to='/normal'>Start</Link></button>
             </div>

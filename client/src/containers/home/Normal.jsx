@@ -15,8 +15,8 @@ const Normal = () => {
                 <button><Link to='/carni'>Carnivore diet food</Link></button>
                 </div>
                 <div className='normal-content__space'></div>
-            <h1 className='normal__text'>The number of people:</h1>
-            <p>Budget per person:</p>
+            <h1 className='normal__text'>Seats per table:</h1>
+            <p>Food price:</p>
             <div className='normal-content__start'>
             <button><Link to='/normal'>Start</Link></button>
             </div>
