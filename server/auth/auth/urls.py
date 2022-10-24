@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/',include('users.urls')),
     path('apirandom/',include('random_menu.urls')),
+    path('apireview/',include('review.urls')),
 ]
