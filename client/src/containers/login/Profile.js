@@ -24,7 +24,7 @@ function Profile() {
     fetch("https://localhost:8000/api/user", requestOptions)
   .then(response => response.json())
   .then(result => { 
-    if (result.status === 'ok') {
+    if (result.id) {
         setUser(result.user)
         setIsLoaded(false)
     } else if (result.status == 'forbidden') {
