@@ -40,21 +40,7 @@ const NavBar = () => {
           <p><Link className='navbar-links_container' to='/review'>Get reviews</Link></p>
         </div>
       </div>
-      {
-              auth ? 
-                <div className='navbar-links_container'>
-                  <button><Link to='/logout'>Log</Link></button>
-
-                  <button onClick={toggleNavbar}>
-                  </button>
-                
-                </div>
-                : 
-                <div className='navbar-links_container'>
-                  <button onClick={toggleNavbar}>
-                  </button>
-                </div>
-        }
+     
       <div className='navbar-sign'>
       {!isLoggedIn() && ( <button><Link to='/login'>Login</Link></button>)}
     </div>
