@@ -1,7 +1,8 @@
 from rest_framework import serializers
-from random_menu.models import Review
+from review.models import Review
 
 class ReviewSerializer(serializers.ModelSerializer):
     class Meta:
         model = Review
-        field = ( 'Reviewid', 'ReviewComment', 'id', 'name')
+        fields = '__all__'
+        #field = ( 'Reviewid', 'ReviewComment', 'id', 'name')

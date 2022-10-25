@@ -5,9 +5,11 @@ from random_menu.models import Menu , Restaurant
 class MenuSerializer(serializers.ModelSerializer):
     class Meta:
         model = Menu
-        field = ( 'Menuid', 'MenuName', 'MenuPrice', 'MenuPic', 'MenuType')
+        fields = '__all__'
+        #( 'Menuid', 'MenuName', 'MenuPrice', 'MenuPic', 'MenuType')
 
 class RestaurantSerializer(serializers.ModelSerializer):
     class Meta:
         model = Restaurant
-        field = ('Restaurantid',' RestaurantName',' Menuid', 'RestaurantSeat')
+        fields = '__all__'
+        #field = ('Restaurantid',' RestaurantName',' Menuid', 'RestaurantSeat')

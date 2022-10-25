@@ -1,21 +1,25 @@
 from django import views
-from django.urls import path
+from django.urls import path,include
+from rest_framework import serializers,viewsets,routers
+from . import views
+from rest_framework.routers import DefaultRouter
 #from .views import 
 #from django.conf.urls import url
-from review.views import ReviewApi,SaveFile
+from review.views import ReviewViewSet
 
 from django.conf.urls.static import static
 from django.conf import settings
 
-urlpatterns = [
-    path('review',ReviewApi.as_view()),
-    path('savefile',SaveFile.as_view()),
-   
-    
-    
-    '''url(r'^review$',views.ReviewApi),
-    url(r'^review/([0-9]+)$',views.ReviewApi),
+router = routers.DefaultRouter()
+router.register('review', views.ReviewViewSet, 'review')
 
-    url(r'^review/savefile',views.SaveFile),'''
+
+urlpatterns = [
+
+    path('', include(router.urls))
   
 ] +static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+
+
+'''router = routers.DefaultRouter()
+router.register(r'Review/list',ReviewViewSet)'''

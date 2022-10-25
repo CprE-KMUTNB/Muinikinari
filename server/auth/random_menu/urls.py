@@ -1,25 +1,27 @@
 from django import views
-from django.urls import path
+from django.urls import path,include
+from rest_framework import serializers,viewsets,routers
+from . import views
+from rest_framework.routers import DefaultRouter
 #from .views import 
 #from django.conf.urls import url
-from random_menu.views import MenuApi,RestaurantApi,SaveFile
+from random_menu.views import  MenuViewSet , RestaurantViewSet
 
 from django.conf.urls.static import static
 from django.conf import settings
 
+
+router = routers.DefaultRouter()
+router.register('menu', views.MenuViewSet, 'menu')
+router.register('restaurant', views.RestaurantViewSet, 'restaurant')
+
 urlpatterns = [
-    path('menu',MenuApi.as_view()),
-    path('restaurant',RestaurantApi.as_view()),
-    path('savefile',SaveFile.as_view()),
 
-
-    '''url(r'^menu$',views.MenuApi),
-    url(r'^restaurant/([0-9]+)$',views.RestaurantApi),
-    url(r'^restaurant$',views.RestaurantApi),
-
-    url(r'^menu$',views.MenuApi),
-    url(r'^menu/([0-9]+)$',views.MenuApi),
-
-    url(r'^random/savefile',views.SaveFile),'''
+    path('', include(router.urls))
   
 ] +static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+
+
+'''router = routers.DefaultRouter()
+router.register(r'menu/list',MenuApiView)
+router.register(r'Restaurant/list',RestaurantApiView)'''
