@@ -15,10 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+#from django.conf.urls import url,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/',include('users.urls')),
     path('apirandom/',include('random_menu.urls')),
     path('apireview/',include('review.urls')),
+    #url(r'^',include('random_menu.urls')),
+    #url(r'^',include('review.urls')) 
 ]
