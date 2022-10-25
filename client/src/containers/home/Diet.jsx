@@ -32,7 +32,7 @@ const Diet = () => {
 
     }
     return (
-        <div className='diet section_padding' id ='normal'>
+        <div className='diet section_padding' id ='diet'>
             <div className='diet-yellow'></div>
             <div className='diet-content'>
             <div className='diet-content__input'>

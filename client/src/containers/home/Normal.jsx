@@ -3,6 +3,8 @@ import './normal.css';
 import burgerpage from '../../assets/burgerpage.png';
 import { Link } from "react-router-dom";
 import {useState,useEffect} from 'react';
+import '../result/Normalresult';
+
 
 const Normal = () => {
     const [companyName, setCompanyName] = useState("")
@@ -60,7 +62,7 @@ const Normal = () => {
 
           </select>
             <div className='normal-content__start'>
-            <button><Link to='/normal' onClick={saveBtn}>Start</Link></button>
+            <button><Link to='/normalresult' onClick={saveBtn}>Start</Link></button>
             </div>
             </div>
             <div className='normal-image'>

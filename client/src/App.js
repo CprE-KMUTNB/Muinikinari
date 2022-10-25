@@ -12,6 +12,8 @@ import Review from './containers/review/Review';
 import Login from './containers/login/Login';
 import Profile from './containers/login/Profile';
 import Register from './containers/login/Register';
+import Normalresult from './containers/result/Normalresult';
+
 
 function App() {
 
@@ -38,6 +40,8 @@ function App() {
         <Route path='/profile' element={<Profile />}>
         </Route>
         <Route path='/register' element={<Register />}>
+        </Route>
+        <Route path='/normalresult' element={<Normalresult />}>
         </Route>
       </Routes>
     </div>
