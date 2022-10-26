@@ -62,7 +62,7 @@ const Normal = () => {
 
           </select>
             <div className='normal-content__start'>
-            <button><Link to='/normalresult' onClick={saveBtn}>Start</Link></button>
+            <button><Link to='/normalresult' >Start</Link></button>
             </div>
             </div>
             <div className='normal-image'>
