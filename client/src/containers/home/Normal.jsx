@@ -19,7 +19,7 @@ const Normal = () => {
             // console.log(newData);
         };
         fetchData();
-    }, [])
+    }, []) 
 
     const handleChange = (event) =>{
         setCompanyName(event.target.value);
