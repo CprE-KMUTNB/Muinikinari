@@ -41,7 +41,7 @@ function App() {
         </Route>
         <Route path='/register' element={<Register />}>
         </Route>
-        <Route path='/normalresult' element={<Normalresult />}>
+        <Route path='/normalresult/:point' element={<Normalresult />}>
         </Route>
       </Routes>
     </div>

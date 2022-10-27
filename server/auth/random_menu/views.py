@@ -16,7 +16,7 @@ class MenuViewSet(viewsets.ModelViewSet):
         search_fields = ('=MenuPrice',)
 
 
-        '''def get_queryset(self):
+'''        def get_queryset(self):
                 #queryset = Menu.objects.all()
                 #queryset = Menu.objects.filter(MenuType = 'normal',MenuPrice__gte = 9 )
 
