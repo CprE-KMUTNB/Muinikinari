@@ -5,7 +5,7 @@ class Menu(models.Model):
     Menuid = models.AutoField(primary_key = True)
     MenuName = models.CharField(max_length=500)
     MenuPrice = models.IntegerField()
-    MenuPic = models.ImageField()
+    MenuPic = models.ImageField(upload_to='picfood',blank = True)
     MenuType = models.CharField(max_length=500)
 
 class Restaurant(models.Model):
