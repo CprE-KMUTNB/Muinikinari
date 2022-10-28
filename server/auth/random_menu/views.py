@@ -16,14 +16,14 @@ class MenuViewSet(viewsets.ModelViewSet):
         search_fields = ('=MenuPrice',)
         numd = 0
 
+        def create(self, request):
+            price = request.data
         def get_queryset(self):
                 #queryset = Menu.objects.all()
                 #queryset = Menu.objects.filter(MenuType = 'normal',MenuPrice__gte = 9 )
 
-
                 queryset = Menu.objects.raw("SELECT * FROM random_menu_menu m JOIN random_menu_restaurant r ON r.Menuid = m.Menuid WHERE m.MenuPrice > %s AND m.MenuType = %s AND r.RestaurantSeat > %s ORDER BY RAND() LIMIT 1	;",[100,'normal',1])
-                articles = list(queryset)
-                numd = articles[0]
+
                 return queryset
 
 '''queryset = Menu.objects.all()
