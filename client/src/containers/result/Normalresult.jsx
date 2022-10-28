@@ -3,26 +3,18 @@ import './normalresult.css';
 import kawpad from '../../assets/pngwing 1.png';
 import { Link, useParams } from "react-router-dom";
 import axios from 'axios'
-import { useEffect } from 'react';
+
 
 const Normalresult = () => {
   let {point} = useParams()
   const normal = 'normal'
 
-  fetch(`http://localhost:8000/apirandom/menu/?search=${point}`)
+  fetch(`http://localhost:8000/apirandom/menu/`,GET)
   /*.get(`http://localhost:8000/apirandom/menu/?search=${point}`)*/
   .then(response=> response.json())
-  .then(data => { 
-    
- })
-  const fetchData=()=>{
-    axios
-    .get(`http://localhost:8000/apirandom/menu/?search=${point}`)
-    .then(response=> response.json())
-  }
-  useEffect{()=>{ fetchData}
+ 
+  
 
-  }
 
   return (
     <div className='normalresult section__padding' id='normalresult'>
