@@ -15,7 +15,7 @@ const Home = () => {
         <h1 className='gradient__text'>Good food</h1>
         <p>is the foundation of happiness.</p>
         <div className='home-content__input'>
-        <button><Link to='/normal'>Normal food</Link></button>
+        <Link to='/normal'><button>Normal food</button></Link>
         <button><Link to='/veget'>Vegetarian food</Link></button>
         <button><Link to='/diet'>Diet food</Link></button>
         <button><Link to='/carni'>Carnivore diet food</Link></button>

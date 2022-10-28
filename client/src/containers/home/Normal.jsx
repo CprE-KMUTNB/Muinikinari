@@ -44,7 +44,8 @@ const Normal = () => {
           </select>
              
             <div className='normal-content__start'>
-            <button><Link to={`/normalresult/${selected}`} >Start</Link></button>
+    
+             <Link to={`/normalresult/${selected}`} ><button>Start</button></Link>
             </div>
             </div>
             <div className='normal-image'>

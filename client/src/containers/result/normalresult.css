@@ -16,8 +16,8 @@
 }
 .normalresult-content__input {
     width: 100%;
-
     display: flex;
+    flex-direction: column;
 }
 
 .normalresult-content__back {
@@ -49,13 +49,14 @@
     filter: contrast();
 
 }
+
 .normalresult-content h1 {
     font-family: Mitr;
     font-weight: 700;
-    font-size: 80px;
+    font-size: 40px;
     line-height: 90px;
     letter-spacing: -0.017em;
-    color: white;
+    color: #E7B925;
     filter: contrast();
 
 }
@@ -121,3 +122,5 @@
         line-height: 60px;
         }
 }
+
+
