@@ -38,7 +38,7 @@ const Normalresult = () => {
         
         <div className='normalresult-content__input'>
           <h1>{localStorage.getItem('Foodname')}</h1>
-                <button><Link to='/normal'>Back to random page</Link></button>
+                <Link to='/normal'><button>Back to random page</button></Link>
                 </div></div>
         <div className='normalresult-image'>
           <div className='normalresult-image-top'>

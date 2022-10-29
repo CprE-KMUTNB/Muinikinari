@@ -41,7 +41,7 @@ const Veget = () => {
 
           </select>
             <div className='veget-content__start'>
-            <button><Link to='/veget'>Start</Link></button>
+            <Link to='/veget'><button>Start</button></Link>
             </div>
             </div>
             <div className='veget-image'>

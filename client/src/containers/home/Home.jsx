@@ -16,9 +16,9 @@ const Home = () => {
         <p>is the foundation of happiness.</p>
         <div className='home-content__input'>
         <Link to='/normal'><button>Normal food</button></Link>
-        <button><Link to='/veget'>Vegetarian food</Link></button>
-        <button><Link to='/diet'>Diet food</Link></button>
-        <button><Link to='/carni'>Carnivore diet food</Link></button>
+        <Link to='/veget'><button>Vegetarian food</button></Link>
+        <Link to='/diet'><button>Diet food</button></Link>
+        <Link to='/carni'><button>Carnivore diet food</button></Link>
   </div>
         </div>
         <div className='home-image'>

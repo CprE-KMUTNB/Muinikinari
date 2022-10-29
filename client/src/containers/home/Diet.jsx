@@ -24,9 +24,9 @@ const Diet = () => {
             <div className='diet-yellow'></div>
             <div className='diet-content'>
             <div className='diet-content__input'>
-                <button><Link to='/normal'>Normal food</Link></button>
-                <button><Link to='/veget'>Vegetarian food</Link></button>
-                <button><Link to='/carni'>Carnivore diet food</Link></button>
+                <Link to='/normal'><button>Normal food</button></Link>
+                <Link to='/veget'><button>Vegetarian food</button></Link>
+                <Link to='/carni'><button>Carnivore diet food</button></Link>
                 </div>
                 <div className='diet-content__space'></div>
 

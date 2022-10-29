@@ -2,12 +2,13 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
 import kahmoo from '../assets/kahmoo.jpg';
 import yumsalmon from '../assets/yumsalmon.jpg';
 import kapowmoo from '../assets/kapowmoo.jpg';
 import padseeew from '../assets/padseeew.jpg';
-
+import Scrollbar from 'smooth-scrollbar';
+import OverscrollPlugin from 'smooth-scrollbar/plugins/overscroll';
+import {useState,useEffect} from 'react';
 
 /*สร้างฟังก์ชันslideรูป สำหรับหน้าrecommend*/
 function ImageSlider() {
@@ -21,6 +22,7 @@ function ImageSlider() {
     }
   return (
     <Slider {...settings}>
+        
         <div className='card-wrapper'>
         <div className='card'>
             <div className='card-image'>

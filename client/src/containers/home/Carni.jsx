@@ -25,9 +25,9 @@ const Carni = () => {
             <div className='carni-yellow'></div>
             <div className='carni-content'>
             <div className='carni-content__input'>
-                <button><Link to='/normal'>Normal food</Link></button>
-                <button><Link to='/veget'>Vegetarian food</Link></button>
-                <button><Link to='/diet'>Diet food</Link></button>
+                <Link to='/normal'><button>Normal food</button></Link>
+                <Link to='/veget'><button>Vegetarian food</button></Link>
+                <Link to='/diet'><button>Diet food</button></Link>
                 </div>
                 <div className='carni-content__space'></div>
             
