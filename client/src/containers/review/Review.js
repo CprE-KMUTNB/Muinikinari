@@ -15,7 +15,7 @@ const Review = () => {
   <div class="comments_content">
   <Scrollbar style={{ width: 1000, height: 500 }}>
       <Comments currentUserId='1'/>
-      </Scrollbar>;
+      </Scrollbar>
       </div>
         </div></div>
   )

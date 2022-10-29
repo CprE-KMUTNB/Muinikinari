@@ -64,6 +64,7 @@ function ImageSlider() {
         </div>
         </div>
     </Slider>
+    
     )
 }
 

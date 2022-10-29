@@ -1,16 +1,98 @@
 import React from 'react';
 import ImageSlider from '../../components/Slider';
 import '../../css/App.scss';
-
-
+import Scrollbar from 'react-custom-scrollbars';
+import "./recommend.css";
+import { useState } from "react";
 /*จัดหน้าRecommend*/
 /*แก้ไขstyleที่App.scss*/
 const Recommend = () => {
+  const [selectedImages, setSelectedImages] = useState([]);
+
+  const onSelectFile = (event) => {
+    const selectedFiles = event.target.files;
+    const selectedFilesArray = Array.from(selectedFiles);
+
+    const imagesArray = selectedFilesArray.map((file) => {
+      return URL.createObjectURL(file);
+    });
+
+    setSelectedImages((previousImages) => previousImages.concat(imagesArray));
+
+    // FOR BUG IN CHROME
+    event.target.value = "";
+  };
+
+  function deleteHandler(image) {
+    setSelectedImages(selectedImages.filter((e) => e !== image));
+    URL.revokeObjectURL(image);
+  }
+
   return (
     <div className='recommend section__margin' id='recommend'>
       <div className='container mt-5 carousel'>
       <h1 className='slider_title'>Recommend</h1>
+      <Scrollbar style={{ width: 1850, height: 695 }}>
       <ImageSlider />
+      <div className='bestseller-content__space'></div>
+      <h1 className='bestseller_title'>What's your favorite dish?</h1>
+      <p className='bestseller_secondtitle'>Let's share!</p>
+      <div className='bestseller_pic'>
+      <section>
+      <label>
+        + Add Images 
+        <br />
+        <span>up to 10 images</span>
+        <input
+          type="file"
+          name="images"
+          onChange={onSelectFile}
+          multiple
+          accept="image/png , image/jpeg, image/webp"
+        />
+      </label>
+      <br />
+
+      <input type="file" multiple />
+
+      {selectedImages.length > 0 &&
+        (selectedImages.length > 10 ? (
+          <p className="error">
+            You can't upload more than 10 images! <br />
+            <span>
+              please delete <b> {selectedImages.length - 10} </b> of them{" "}
+            </span>
+          </p>
+        ) : (
+          <button
+            className="upload-btn"
+            onClick={() => {
+              console.log(selectedImages);
+            }}
+          >
+            UPLOAD {selectedImages.length} IMAGE
+            {selectedImages.length === 1 ? "" : "S"}
+          </button>
+        ))}
+
+      <div className="images">
+        {selectedImages &&
+          selectedImages.map((image, index) => {
+            return (
+              <div key={image} className="image">
+                <img src={image} height="200" alt="upload" />
+                <button onClick={() => deleteHandler(image)}>
+                  delete image
+                </button>
+                <p>{index + 1}</p>
+              </div>
+            );
+          })}
+      </div>
+    </section>
+    </div>
+    
+    </Scrollbar>
     </div>
     </div>
   )
