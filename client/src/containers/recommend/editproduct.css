@@ -1,0 +1,14 @@
+.EditProduct {
+    display: flex;
+}
+.column-is-half {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    filter: contrast();
+    color:white;
+    
+
+}

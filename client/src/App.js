@@ -13,7 +13,8 @@ import Login from './containers/login/Login';
 import Profile from './containers/login/Profile';
 import Register from './containers/login/Register';
 import Normalresult from './containers/result/Normalresult';
-
+import AddProduct from './containers/recommend/AddProduct';
+import EditProduct from './containers/recommend/EditProduct';
 
 function App() {
 
@@ -24,6 +25,10 @@ function App() {
         <Route path='/' element={<Home />}>
         </Route>
         <Route path='/recommend' element={<Recommend />}>
+        </Route>
+        <Route path="add" element={<AddProduct/>}>
+        </Route>
+        <Route path="edit/:id" element={<EditProduct/>}>
         </Route>
         <Route path='/normal' element={<Normal />}>
         </Route>

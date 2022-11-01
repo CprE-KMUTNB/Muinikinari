@@ -1,4 +1,3 @@
-
 .bestseller-content__space {
     width: 100%;
     margin: 12rem 0 1rem;
@@ -18,122 +17,30 @@
     
 }
 
-.bestseller_secondtitle {
-    font-weight: 700;
-    font-size: 50px;
-    letter-spacing: -0.017em;
-    color: #E7B925;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 2vw;
-    filter: contrast();
+.button-is-success {
+  padding: 2rem 51.55rem;
 }
 
-.bestseller_pic section {
-    padding: 2rem 0;
-  }
-  
-.bestseller_pic label {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px dotted white;
-    border-radius: 20px;
-    width: 100rem;
-    height: 10rem;
-    cursor: pointer;
-    font-size: 30px;
-    color: aliceblue;
-  }
-  
-.bestseller_pic label span {
-    font-weight: lighter;
-    font-size: 25px;
-    padding-top: 0.5rem;
-    cursor: pointer;
-  }
-  
-.bestseller_pic input {
-    display: none;
-  }
-  
-.bestseller_pic img {
-    padding: 0;
-    margin: 0;
-  }
-  
-.images {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    color: #021d3c;
-  }
-  
- .bestseller_pic image {
-    margin: 1rem 0.5rem;
-    position: relative;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
-  }
-  
-.bestseller_pic image button {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    cursor: pointer;
-    border: none;
-    color: white;
-    background-color: red;
-    font-family: Poppins;
-    font-size: 20px;
-  }
-  
-.bestseller_pic image button:hover {
-    background-color: red;
-  }
-  
-.bestseller_pic image p {
-    padding: 0 0.5rem;
-    margin: 0;
-  }
-  
-.upload-btn {
-    cursor: pointer;
-    display: block;
-    margin: 0 auto;
-    border: none;
-    width: 10rem;
-    height: 3rem;
-    flex: 0.6;
+.button-is-success button{
+  flex: 0.6;
+    width: 200px;
     min-width: 50px;
     
     background-color: transparent;
     border-radius: 50px;
     border-color: #E7B925;
     background-color: #E7B925;
-    font-family: 'Poppins';
-    font-weight: 700;
     font-size: 25px;
+    font-family: var(--font-family);
+    font-weight: 700;
     line-height: 60px;
 
     letter-spacing: -0.017em;
-    color: #021d3c;
+    color: black;
     cursor: pointer;
     outline: none;
-  }
-  
-  label:hover,
+    padding: 0 1rem;
 
-  .error {
-    text-align: center;
-    color: red;
-    font-size: 25px;
-  }
-  
-  .error span {
-    color: red;
-    font-size: 25px;
-  }
+    filter: contrast();
+}
+
