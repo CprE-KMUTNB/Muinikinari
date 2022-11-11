@@ -12,7 +12,7 @@ from django.conf import settings
 
 router = routers.DefaultRouter()
 router.register('review', views.ReviewViewSet, 'review')
-
+router.register('recommend', views.RecommendViewSet, 'recommend')
 
 urlpatterns = [
 

@@ -1,0 +1,1 @@
+UPDATE `muinikinari_auth`.`review_reccommend` SET `ReccommendMenu` = 'padthai', `ReccommendPic` = 'picfood\\padthai.jpg' WHERE (`Reccommendid` = '2');

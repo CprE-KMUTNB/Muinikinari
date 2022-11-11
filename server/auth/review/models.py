@@ -7,3 +7,9 @@ class Review(models.Model):
     id = models.IntegerField()
     ReviewDate = models.DateField
     name = models.CharField(max_length=500)
+
+class Reccommend(models.Model):
+    Reccommendid = models.AutoField(primary_key = True)
+    ReccommendMenu = models.CharField(max_length=1000)
+    ReccommendPic = models.CharField(max_length=1000)
+    
