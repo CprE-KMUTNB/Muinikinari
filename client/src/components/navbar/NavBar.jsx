@@ -38,7 +38,6 @@ const NavBar = () => {
         <div className='navbar-links_container'>
           <p><Link className='navbar-links_container' to='/'>Home</Link></p>
           <p><Link className='navbar-links_container' to='/recommend'>Recommend</Link></p>
-          <p><Link className='navbar-links_container' to='/review'>Get reviews</Link></p>
         </div>
       </div>
      
