@@ -8,7 +8,6 @@ import Normal from './containers/home/Normal';
 import Veget from './containers/home/Veget';
 import Diet from './containers/home/Diet';
 import Carni from './containers/home/Carni';
-import Review from './containers/review/Review';
 import Login from './containers/login/Login';
 import Profile from './containers/login/Profile';
 import Register from './containers/login/Register';
@@ -37,8 +36,6 @@ function App() {
         <Route path='/diet' element={<Diet />}>
         </Route>
         <Route path='/carni' element={<Carni />}>
-        </Route>
-        <Route path='/review' element={<Review />}>
         </Route>
         <Route path='/login' element={<Login />}>
         </Route>
