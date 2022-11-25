@@ -29,19 +29,22 @@ const Veget = () => {
                 </div>
                 <div className='veget-content__space'></div>
             
-          <div className='normal-content__start'></div>
-          <p>Food price:</p>
+                <div className='veget-content__start'></div>
+            <p>Food price:</p>
             <select className="form-control" value={selected} onChange={handleChange}>
             {options.map(option => (
           <option key={option.value} value={option.value}>
             {option.text}
           </option>
+    
               ))
               }
 
           </select>
+             
             <div className='veget-content__start'>
-            <Link to='/veget'><button>Start</button></Link>
+    
+             <Link to={`/vegetresult/${selected}`} ><button>Start</button></Link>
             </div>
             </div>
             <div className='veget-image'>

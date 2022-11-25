@@ -30,19 +30,22 @@ const Diet = () => {
                 </div>
                 <div className='diet-content__space'></div>
 
-          <div className='normal-content__start'></div>
-          <p>Food price:</p>
+                <div className='diet-content__start'></div>
+            <p>Food price:</p>
             <select className="form-control" value={selected} onChange={handleChange}>
             {options.map(option => (
           <option key={option.value} value={option.value}>
             {option.text}
           </option>
+    
               ))
               }
 
           </select>
+             
             <div className='diet-content__start'>
-            <button><Link to='/normal'>Start</Link></button>
+    
+             <Link to={`/dietresult/${selected}`} ><button>Start</button></Link>
             </div>
             </div>
             <div className='diet-image'>
@@ -50,8 +53,8 @@ const Diet = () => {
                     <img src={dietfood} alt='dietfood' />
                 </div>
                 <div className='diet-image-bottom'>
-          <img src={Ellipse1} alt='Ellipse1' />
-        </div> 
+               <img src={Ellipse1} alt='Ellipse1' />
+               </div> 
                 </div>
             </div>
             )

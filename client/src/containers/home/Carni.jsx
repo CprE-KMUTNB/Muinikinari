@@ -31,26 +31,29 @@ const Carni = () => {
                 </div>
                 <div className='carni-content__space'></div>
             
-          <div className='normal-content__start'></div>
-          <p>Food price:</p>
+          <div className='carni-content__start'></div>
+            <p>Food price:</p>
             <select className="form-control" value={selected} onChange={handleChange}>
             {options.map(option => (
           <option key={option.value} value={option.value}>
             {option.text}
           </option>
+    
               ))
               }
 
           </select>
+             
             <div className='carni-content__start'>
-            <button><Link to='/carni'>Start</Link></button>
+    
+             <Link to={`/carniresult/${selected}`} ><button>Start</button></Link>
             </div>
             </div>
             <div className='carni-image'>
                 <div className='carni-image-top'>
-                    <img src={porkstack} alt='porkstack' />
+                  <img src={porkstack} alt='porkstack' />
                 </div>
-                <div className='diet-image-bottom'>
+                <div className='carni-image-bottom'>
           <img src={Ellipse1} alt='Ellipse1' />
         </div> 
                 </div>

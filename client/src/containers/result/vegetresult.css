@@ -1,0 +1,124 @@
+.vegetresult {
+    display: flex;
+}
+
+.vegetresult-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    margin-right: 5rem;
+
+    filter: contrast();
+
+}
+.vegetresult-content__input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.vegetresult-content__back {
+    width: 100%;
+    margin: -7rem 0 1rem;
+
+    display: flex;
+}
+
+.vegetresult-content__input button {
+    flex: 0.6;
+    width: 100%;
+    min-width: 50px;
+    margin-top: 5rem;
+    background-color: transparent;
+    border-radius: 50px;
+    border-color: #ffffff;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 30px;
+
+    letter-spacing: -0.017em;
+    color: #FFFFFF;
+    cursor: pointer;
+    outline: none;
+    padding: 0 1rem;
+
+    filter: contrast();
+
+}
+
+.vegetresult-content h1 {
+    font-family: Mitr;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 90px;
+    letter-spacing: -0.017em;
+    color: #E7B925;
+    filter: contrast();
+
+}
+
+.vegetresult-content p {
+    font-family: Mitr;
+    color: #E7B925;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 90px;
+    letter-spacing: -0.017em;
+
+    filter: contrast();
+
+}
+
+
+/*จัดวางตำแหน่งจานผัดไทย*/
+.vegetresult-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: contrast(); 
+}
+
+  /*รูปจานผัดไทย*/
+.vegetresult-image-top {
+    padding-top: 0px; 
+    padding-right: 20%; 
+    padding-left: 27px;
+    width: 100%; 
+    z-index: 0;
+  }
+
+
+  /*จัดวางตำแหน่งพื้นหลังสีเหลือง*/
+.vegetresult-yellow {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #E7B925;
+    clip-path: ellipse(700px 1500px at right 800px)
+}
+
+/*การแสดงผลGood food is the foundation of happiness.บนหน้าจอmobile phone*/
+@media screen and (max-width: 1050px) {
+    .vegetresult {
+        flex-direction: column;
+    }
+
+    .vegetresult-content {
+        margin: 0 0 3rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .vegetresult h1 {
+        font-size: 48px;
+        line-height: 60px;
+        }
+}
