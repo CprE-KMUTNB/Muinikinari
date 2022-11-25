@@ -76,8 +76,7 @@
 
 /*จัดวางตำแหน่งจานผัดไทย*/
 .carniresult-image {
-    max-width: 720px;
-    max-height: 660px;
+    max-width: 150px;
     flex: 1;
     display: flex;
     justify-content: center;
