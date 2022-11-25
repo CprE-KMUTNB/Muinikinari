@@ -6,7 +6,7 @@ import  {listMenu} from "../../components/function"
 
 const Dietresult = () => {
   let {point} = useParams()
-  const normal = 'diet'
+  const diet = 'diet'
 
  /* fetch(`http://localhost:8000/apirandom/menu/`,GET)
   .get(`http://localhost:8000/apirandom/menu/?search=${point}`)
