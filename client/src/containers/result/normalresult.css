@@ -3,7 +3,7 @@
 }
 
 .normalresult-content {
-    width: 800px;
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -76,7 +76,7 @@
 
 /*จัดวางตำแหน่งจานผัดไทย*/
 .normalresult-image {
-    flex: 1;
+    width: 800px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,13 +92,14 @@
     z-index: 0;
   }
 
-.vegetresult-image-top img{
+  .normalresult-image-top img{
     width: 800px;
     height: 500px;
     object-fit: cover;
     object-position: center;
     border-radius: 10px; ;
   }
+
   /*จัดวางตำแหน่งพื้นหลังสีเหลือง*/
 .normalresult-yellow {
     position: absolute;
