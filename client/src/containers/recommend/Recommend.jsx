@@ -69,17 +69,15 @@ const Recommend = () => {
         {foodall.map((foodall,index) => (
           <div className="column is-one-quarter" key={index}>
             
-            <div className="card">
-              <div className="card-image">
+            <div className="newcard">
+              <div className="newcard_image">
+                <figure className="image is-4by3">
                   {/* <img src="https://miro.medium.com/max/1200/1*dLaDL-lSN0iprzmOpmM7zQ.png"  /> */}
                   <img src={`http://localhost:8000/pic/${foodall.ReccommendPic}`} alt="Image" />
+                </figure>
               </div>
-              <div className="card-content">
-                <div className="media">
-                  <div className="media-content">
+              <div className="newcard_content">
                     <p className="title is-4">{foodall.ReccommendMenu}</p>
-                  </div>
-                </div>
               </div>
 
               <footer className="card-footer">
