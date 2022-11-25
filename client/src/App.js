@@ -12,6 +12,10 @@ import Login from './containers/login/Login';
 import Profile from './containers/login/Profile';
 import Register from './containers/login/Register';
 import Normalresult from './containers/result/Normalresult';
+import Vegetresult from './containers/result/Vegetresult';
+import Carniresult from './containers/result/Carniresult';
+import Dietresult from './containers/result/Dietresult';
+
 import AddProduct from './containers/recommend/AddProduct';
 import EditProduct from './containers/recommend/EditProduct';
 
@@ -44,6 +48,12 @@ function App() {
         <Route path='/register' element={<Register />}>
         </Route>
         <Route path='/normalresult/:point' element={<Normalresult />}>
+        </Route>
+        <Route path='/carniresult/:point' element={<Carniresult />}>
+        </Route>
+        <Route path='/dietresult/:point' element={<Dietresult />}>
+        </Route>
+        <Route path='/vegetresult/:point' element={<Vegetresult />}>
         </Route>
       </Routes>
     </div>
