@@ -13,6 +13,9 @@ from django.conf import settings
 
 router = routers.DefaultRouter()
 router.register('menu', views.MenuViewSet, 'menu')
+router.register('menuveg', views.MenuViewSet2, 'menu')
+router.register('menudiet', views.MenuViewSet3, 'menu')
+router.register('menucarni', views.MenuViewSet4, 'menu')
 router.register('restaurant', views.RestaurantViewSet, 'restaurant')
 
 urlpatterns = [

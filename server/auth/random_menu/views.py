@@ -22,10 +22,61 @@ class MenuViewSet(viewsets.ModelViewSet):
                 #queryset = Menu.objects.all()
                 #queryset = Menu.objects.filter(MenuType = 'normal',MenuPrice__gte = 9 )
 
-                queryset = Menu.objects.raw("SELECT * FROM random_menu_menu m JOIN random_menu_restaurant r ON r.Menuid = m.Menuid WHERE m.MenuPrice > %s AND m.MenuType = %s AND r.RestaurantSeat > %s ORDER BY RAND() LIMIT 1	;",[100,'normal',1])
+                queryset = Menu.objects.raw("SELECT * FROM random_menu_menu m JOIN random_menu_restaurant r ON r.Menuid = m.Menuid WHERE m.MenuPrice > %s AND m.MenuType = %s AND r.RestaurantSeat > %s ORDER BY RAND() LIMIT 1	;",[40,'normal',1])
 
                 return queryset
 
+class MenuViewSet2(viewsets.ModelViewSet):
+        serializer_class = MenuSerializer
+        queryset = Menu.objects.all()
+        filter_backends = (filters.SearchFilter,)
+        search_fields = ('=MenuPrice',)
+        numd = 0
+
+        def create(self, request):
+            price = request.data
+        def get_queryset(self):
+                #queryset = Menu.objects.all()
+                #queryset = Menu.objects.filter(MenuType = 'normal',MenuPrice__gte = 9 )
+
+                queryset = Menu.objects.raw("SELECT * FROM random_menu_menu m JOIN random_menu_restaurant r ON r.Menuid = m.Menuid WHERE m.MenuPrice > %s AND m.MenuType = %s AND r.RestaurantSeat > %s ORDER BY RAND() LIMIT 1	;",[40,'veget',1])
+
+                return queryset
+
+class MenuViewSet3(viewsets.ModelViewSet):
+        serializer_class = MenuSerializer
+        queryset = Menu.objects.all()
+        filter_backends = (filters.SearchFilter,)
+        search_fields = ('=MenuPrice',)
+        numd = 0
+
+        def create(self, request):
+            price = request.data
+        def get_queryset(self):
+                #queryset = Menu.objects.all()
+                #queryset = Menu.objects.filter(MenuType = 'normal',MenuPrice__gte = 9 )
+
+                queryset = Menu.objects.raw("SELECT * FROM random_menu_menu m JOIN random_menu_restaurant r ON r.Menuid = m.Menuid WHERE m.MenuPrice > %s AND m.MenuType = %s AND r.RestaurantSeat > %s ORDER BY RAND() LIMIT 1	;",[40,'diet',1])
+
+                return queryset
+
+
+class MenuViewSet4(viewsets.ModelViewSet):
+        serializer_class = MenuSerializer
+        queryset = Menu.objects.all()
+        filter_backends = (filters.SearchFilter,)
+        search_fields = ('=MenuPrice',)
+        numd = 0
+
+        def create(self, request):
+            price = request.data
+        def get_queryset(self):
+                #queryset = Menu.objects.all()
+                #queryset = Menu.objects.filter(MenuType = 'normal',MenuPrice__gte = 9 )
+
+                queryset = Menu.objects.raw("SELECT * FROM random_menu_menu m JOIN random_menu_restaurant r ON r.Menuid = m.Menuid WHERE m.MenuPrice > %s AND m.MenuType = %s AND r.RestaurantSeat > %s ORDER BY RAND() LIMIT 1	;",[40,'carnivore',1])
+
+                return queryset
 '''queryset = Menu.objects.all()
     serializer_class = MenuSerializer
     serializer_class.data
