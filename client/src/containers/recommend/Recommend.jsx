@@ -43,7 +43,7 @@ const Recommend = () => {
 
   const deleteProduct = async (Reccommendid) => {
     try {
-      await axios.delete(`http://127.0.0.1:8000/apireview/recommend/${foodall.Reccommendid}`);
+      await axios.delete(`http://127.0.0.1:8000/apireview/recommend/${Reccommendid}`);
       getFoodall();
     } catch (error) {
       console.log(error);
@@ -75,13 +75,14 @@ const Recommend = () => {
           <p className="title_is_4">{foodall.ReccommendMenu}</p>
           </div>
           <div className='newcard_content'>
-            <Link to={`edit/${foodall.Reccommendid}`} className="card_footer_item">
+            <Link to={`../edit/${foodall.Reccommendid}`} className="card_footer_item">
                   Edit
                 </Link>
                 </div>
             <div className='newcard_content'>
             <a
                   onClick={() => deleteProduct(foodall.Reccommendid)}
+                  // onClick={()=>console.log(foodall.Reccommendid)}
                   className="card_footer_item"
                 >
                   Delete

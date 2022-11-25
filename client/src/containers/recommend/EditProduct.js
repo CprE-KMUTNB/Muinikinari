@@ -19,7 +19,7 @@ const EditProduct = () => {
   }, []);
 
   const getProductById = async () => {
-    const response = await axios.get(`http://localhost:5000/products/${id}`);
+    const response = await axios.get(`http://127.0.0.1:8000/apireview/recommend/${id}`);
     setTitle(response.data.name);
     setFile(response.data.image);
     setPreview(response.data.url);
@@ -37,9 +37,9 @@ const EditProduct = () => {
     formData.append("file", file);
     formData.append("title", title);
     try {
-      await axios.patch(`http://localhost:5000/products/${id}`, formData, {
+      await axios.patch(`http://127.0.0.1:8000/apireview/recommend/${id}`, formData, {
         headers: {
-          "Content-type": "multipart/form-data",
+          "content-type": "multipart/form-data",
         },
       });
       navigate("/");
@@ -47,6 +47,7 @@ const EditProduct = () => {
       console.log(error);
     }
   };
+
 
   return (
     <div className="columns is-centered mt-5">
@@ -56,7 +57,7 @@ const EditProduct = () => {
         <form onSubmit={updateProduct}>
           <div className="field">
           <Typography component="h1" variant="h5" color="#E7B925" fontFamily={'Poppins'} fontWeight='700' fontSize='30px' alignItems='center'>
-          Product Name
+          Food Name
           </Typography>
           <div className="control">
               <input
@@ -65,7 +66,7 @@ const EditProduct = () => {
                 className="input"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                placeholder="Product Name"
+                placeholder="Food Name"
               />
             </div>
           </div>
