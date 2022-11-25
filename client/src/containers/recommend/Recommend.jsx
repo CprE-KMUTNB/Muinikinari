@@ -13,7 +13,6 @@ import  {listRecommend} from "../../components/function"
 /*จัดหน้าRecommend*/
 /*แก้ไขstyleที่App.scss*/
 const Recommend = () => {
-  const [products, setProducts] = useState([]);
   const [foodall,setFoodall] = useState([]);
 
   const loadData=()=>{
@@ -33,19 +32,19 @@ const Recommend = () => {
     loadData()
   },[])
 
- /* useEffect(() => {
-    getProducts();
-  }, []);*/
+  useEffect(() => {
+    getFoodall();
+  }, []);
 
-  const getProducts = async () => {
-    const response = await axios.get("http://localhost:5000/products");
-    setProducts(response.data);
+  const getFoodall = async () => {
+    const response = await axios.get("http://127.0.0.1:8000/apireview/recommend/");
+    setFoodall(response.data);
   };
 
-  const deleteProduct = async (productId) => {
+  const deleteProduct = async (Reccommendid) => {
     try {
-      await axios.delete(`http://localhost:5000/products/${productId}`);
-      getProducts();
+      await axios.delete(`http://127.0.0.1:8000/apireview/recommend/${foodall.Reccommendid}`);
+      getFoodall();
     } catch (error) {
       console.log(error);
     }
