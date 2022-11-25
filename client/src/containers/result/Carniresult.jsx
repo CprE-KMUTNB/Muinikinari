@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './carniresult.css';
 import { Link, useParams } from "react-router-dom";
 import axios from 'axios'
-import  {listMenu} from "../../components/function"
+import  {listMenucarni} from "../../components/function"
 
 const Carniresult = () => {
   let {point} = useParams()
@@ -13,13 +13,15 @@ const Carniresult = () => {
   .then(response=> response.json())*/
 
   const loadData=()=>{
-    listMenu()
+    listMenucarni()
     .then(res=>{
       console.log(res)
       const Name = res.data[0].MenuName
       const Pic = res.data[0].MenuPic
+      const Res = res.data[0].RestaurantName //
       localStorage.setItem('Foodname',Name)
       localStorage.setItem('Foodpic',Pic)
+      localStorage.setItem('Foodres',Res) //
     }).catch(err=>{
       console.log(err)
     })
@@ -37,6 +39,7 @@ const Carniresult = () => {
         
         <div className='carniresult-content__input'>
           <h1>{localStorage.getItem('Foodname')}</h1>
+          <h1>{localStorage.getItem('Foodres')}</h1>  
                 <Link to='/carni'><button>Back to random page</button></Link>
                 </div></div>
         <div className='carniresult-image'>

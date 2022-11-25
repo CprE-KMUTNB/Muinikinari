@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './vegetresult.css';
 import { Link, useParams } from "react-router-dom";
 import axios from 'axios'
-import  {listMenu} from "../../components/function"
+import  {listMenuveg} from "../../components/function"
 
 const Vegetresult = () => {
   let {point} = useParams()
@@ -13,13 +13,15 @@ const Vegetresult = () => {
   .then(response=> response.json())*/
 
   const loadData=()=>{
-    listMenu()
+    listMenuveg()
     .then(res=>{
       console.log(res)
       const Name = res.data[0].MenuName
       const Pic = res.data[0].MenuPic
+      const Res = res.data[0].RestaurantName //
       localStorage.setItem('Foodname',Name)
       localStorage.setItem('Foodpic',Pic)
+      localStorage.setItem('Foodres',Res) //
     }).catch(err=>{
       console.log(err)
     })
@@ -37,6 +39,7 @@ const Vegetresult = () => {
         
         <div className='vegetresult-content__input'>
           <h1>{localStorage.getItem('Foodname')}</h1>
+          <h1>{localStorage.getItem('Foodres')}</h1>  
                 <Link to='/veget'><button>Back to random page</button></Link>
                 </div></div>
         <div className='vegetresult-image'>
