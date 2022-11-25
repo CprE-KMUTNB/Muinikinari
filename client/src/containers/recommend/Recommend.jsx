@@ -14,12 +14,13 @@ import  {listRecommend} from "../../components/function"
 /*แก้ไขstyleที่App.scss*/
 const Recommend = () => {
   const [products, setProducts] = useState([]);
-
+  const [foodall,setFoodall] = useState([]);
 
   const loadData=()=>{
     listRecommend()
     .then(res=>{
       console.log(res)
+      setFoodall(res.data)
       const Name = res.data[0].ReccommendMenu
       const Pic = res.data[0].ReccommendPic
       localStorage.setItem('Foodname',Name)
@@ -50,6 +51,7 @@ const Recommend = () => {
     }
   };
 
+  console.log(foodall)
   return (
   
     <div className='recommend section__margin' >
@@ -65,28 +67,30 @@ const Recommend = () => {
       </button>
       </Link>
       <div className="columns is-multiline mt-2">
-        {products.map((product) => (
-          <div className="column is-one-quarter" key={product.id}>
+        {foodall.map((foodall,index) => (
+          <div className="column is-one-quarter" key={index}>
+            
             <div className="card">
               <div className="card-image">
                 <figure className="image is-4by3">
-                  <img src={product.url} alt="Image" />
+                  {/* <img src="https://miro.medium.com/max/1200/1*dLaDL-lSN0iprzmOpmM7zQ.png"  /> */}
+                  <img src={`http://localhost:8000/pic/${foodall.ReccommendPic}`} alt="Image" />
                 </figure>
               </div>
               <div className="card-content">
                 <div className="media">
                   <div className="media-content">
-                    <p className="title is-4">{product.name}</p>
+                    <p className="title is-4">{foodall.ReccommendMenu}</p>
                   </div>
                 </div>
               </div>
 
               <footer className="card-footer">
-                <Link to={`edit/${product.id}`} className="card-footer-item">
+                <Link to={`edit/${foodall.Reccommendid}`} className="card-footer-item">
                   Edit
                 </Link>
                 <a
-                  onClick={() => deleteProduct(product.id)}
+                  onClick={() => deleteProduct(foodall.Reccommendid)}
                   className="card-footer-item"
                 >
                   Delete
