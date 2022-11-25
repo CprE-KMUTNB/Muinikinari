@@ -55,7 +55,7 @@ const Recommend = () => {
   
     <div className='recommend section__margin' >
       <div className='container mt-5 carousel'>
-      <Scrollbar style={{ width: 1900, height: 810 }}>
+      <Scrollbar style={{ width: 1900, height: 815 }}>
       <h1 className='slider_title'>Promotion</h1>
       <ImageSlider />
       <div className='bestseller-content__space'></div>
