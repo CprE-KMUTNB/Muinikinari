@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import './normalresult.css';
-import kawpad from '../../assets/pngwing 1.png';
 import { Link, useParams } from "react-router-dom";
 import axios from 'axios'
 import  {listMenu} from "../../components/function"
@@ -43,6 +42,7 @@ const Normalresult = () => {
         <div className='normalresult-image'>
           <div className='normalresult-image-top'>
             <img src={localStorage.getItem('Foodpic')}  />
+            <img src={localStorage.getItem('Foodpic')}/>
           </div>
                
         </div>
