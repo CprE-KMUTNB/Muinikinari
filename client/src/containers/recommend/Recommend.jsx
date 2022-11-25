@@ -6,6 +6,8 @@ import "./recommend.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import  {listRecommend} from "../../components/function"
+
 
 
 /*จัดหน้าRecommend*/
@@ -13,9 +15,26 @@ import { Link } from "react-router-dom";
 const Recommend = () => {
   const [products, setProducts] = useState([]);
 
-  useEffect(() => {
+
+  const loadData=()=>{
+    listRecommend()
+    .then(res=>{
+      console.log(res)
+      const Name = res.data[0].ReccommendMenu
+      const Pic = res.data[0].ReccommendPic
+      localStorage.setItem('Foodname',Name)
+      localStorage.setItem('Foodpic',Pic)
+    }).catch(err=>{
+      console.log(err)
+    })
+  }
+  useEffect(()=>{
+    loadData()
+  },[])
+
+ /* useEffect(() => {
     getProducts();
-  }, []);
+  }, []);*/
 
   const getProducts = async () => {
     const response = await axios.get("http://localhost:5000/products");

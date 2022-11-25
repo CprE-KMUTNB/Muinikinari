@@ -3,7 +3,7 @@ import './normalresult.css';
 import kawpad from '../../assets/pngwing 1.png';
 import { Link, useParams } from "react-router-dom";
 import axios from 'axios'
-import  {listEvent} from "../../components/function"
+import  {listMenu} from "../../components/function"
 
 const Normalresult = () => {
   let {point} = useParams()
@@ -14,7 +14,7 @@ const Normalresult = () => {
   .then(response=> response.json())*/
 
   const loadData=()=>{
-    listEvent()
+    listMenu()
     .then(res=>{
       console.log(res)
       const Name = res.data[0].MenuName

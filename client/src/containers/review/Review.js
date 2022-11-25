@@ -3,8 +3,27 @@ import './review.css';
 import Comments from './Comments'
 import icecream from '../../assets/icecream.png'
 import Scrollbar from 'react-custom-scrollbars';
+import  {listRecommend} from "../../components/function"
+import { useState, useEffect } from "react";
+
 const Review = () => {
-  
+
+  const loadData=()=>{
+    listRecommend()
+    .then(res=>{
+      console.log(res)
+      const Name = res.data[0].ReccommendMenu
+      const Pic = res.data[0].ReccommendPic
+      localStorage.setItem('Foodname',Name)
+      localStorage.setItem('Foodpic',Pic)
+    }).catch(err=>{
+      console.log(err)
+    })
+  }
+  useEffect(()=>{
+    loadData()
+  },[])
+
   return (
     <div className='Review_topic'>
           <div class="Review-pic"><img src={icecream} alt='icecream' /></div>
