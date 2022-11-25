@@ -55,7 +55,7 @@ const Recommend = () => {
   
     <div className='recommend section__margin' >
       <div className='container mt-5 carousel'>
-      <Scrollbar style={{ width: 1900, height: 815 }}>
+      <Scrollbar style={{ width: 1900, height: 800 }}>
       <h1 className='slider_title'>Promotion</h1>
       <ImageSlider />
       <div className='bestseller-content__space'></div>
@@ -65,21 +65,38 @@ const Recommend = () => {
       Add New
       </button>
       </Link>
-      <div className='newcard'>
-      {foodall.map((foodall,index) => (
-        <div className="column is-one-quarter" key={index}>
-          <figure className="image is-4by3">
-                  {/* <img src="https://miro.medium.com/max/1200/1*dLaDL-lSN0iprzmOpmM7zQ.png"  /> */}
-                  <img src={`http://localhost:8000/pic/${foodall.ReccommendPic}`} alt="Image" />
-                </figure>
+      <div className='recommend-content__input'></div>
+      <div className='media__scroller'>
+        <div className='newcard' >
+        {foodall.map((foodall,index) => (
+        <div className="newcard_image" key={index}>
+          <img src={`http://localhost:8000/pic/${foodall.ReccommendPic}`} alt="Image" />
+          <div className='newcard_content'>
+          <p className="title_is_4">{foodall.ReccommendMenu}</p>
+          </div>
+          <div className='newcard_content'>
+            <Link to={`edit/${foodall.Reccommendid}`} className="card_footer_item">
+                  Edit
+                </Link>
+                </div>
+            <div className='newcard_content'>
+            <a
+                  onClick={() => deleteProduct(foodall.Reccommendid)}
+                  className="card_footer_item"
+                >
+                  Delete
+                </a>
+            </div>
         </div>
-      ))}
-      </div>
-      </div>
+      )) }
+        </div>
+      
+      </div></div>
     </Scrollbar>
     </div>
     </div>
   )
 }
+
 
 export default Recommend;
