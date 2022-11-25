@@ -42,7 +42,6 @@ const Normalresult = () => {
         <div className='normalresult-image'>
           <div className='normalresult-image-top'>
             <img src={localStorage.getItem('Foodpic')}  />
-            <img src={localStorage.getItem('Foodpic')}/>
           </div>
                
         </div>

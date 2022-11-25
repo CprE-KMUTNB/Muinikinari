@@ -42,7 +42,6 @@ const Vegetresult = () => {
         <div className='vegetresult-image'>
           <div className='vegetresult-image-top'>
             <img src={localStorage.getItem('Foodpic')}  />
-            <img src={localStorage.getItem('Foodpic')}/>
           </div>
                
         </div>

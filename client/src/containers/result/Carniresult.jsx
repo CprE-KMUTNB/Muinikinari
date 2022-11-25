@@ -42,7 +42,6 @@ const Carniresult = () => {
         <div className='carniresult-image'>
           <div className='carniresult-image-top'>
             <img src={localStorage.getItem('Foodpic')}  />
-            <img src={localStorage.getItem('Foodpic')}/>
           </div>
                
         </div>

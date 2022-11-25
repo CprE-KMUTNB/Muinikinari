@@ -42,7 +42,6 @@ const Dietresult = () => {
         <div className='dietresult-image'>
           <div className='dietresult-image-top'>
             <img src={localStorage.getItem('Foodpic')}  />
-            <img src={localStorage.getItem('Foodpic')}/>
           </div>
                
         </div>
