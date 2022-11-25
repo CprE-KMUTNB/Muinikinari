@@ -25,7 +25,7 @@ const AddProduct = () => {
     formData.append("file", file);
     formData.append("title", title);
     try {
-      await axios.post("http://localhost:5000/products", formData, {
+      await axios.post("http://127.0.0.1:8000/apireview/recommend/", formData, {
         headers: {
           "Content-type": "multipart/form-data",
         },
@@ -44,7 +44,7 @@ const AddProduct = () => {
         <form onSubmit={saveProduct}>
           <div className="field">
           <Typography component="h1" variant="h5" color="#E7B925" fontFamily={'Poppins'} fontWeight='700' fontSize='30px' alignItems='center'>
-          Product Name
+          Food Name
           </Typography>
             <div className="control">
               <input
