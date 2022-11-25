@@ -71,10 +71,8 @@ const Recommend = () => {
             
             <div className="card">
               <div className="card-image">
-                <figure className="image is-4by3">
                   {/* <img src="https://miro.medium.com/max/1200/1*dLaDL-lSN0iprzmOpmM7zQ.png"  /> */}
                   <img src={`http://localhost:8000/pic/${foodall.ReccommendPic}`} alt="Image" />
-                </figure>
               </div>
               <div className="card-content">
                 <div className="media">
