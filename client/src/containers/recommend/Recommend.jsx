@@ -65,37 +65,17 @@ const Recommend = () => {
       Add New
       </button>
       </Link>
-      <div className="columns is-multiline mt-2">
-        {foodall.map((foodall,index) => (
-          <div className="column is-one-quarter" key={index}>
-            
-            <div className="newcard">
-              <div className="newcard_image">
-                <figure className="image is-4by3">
+      <div className='newcard'>
+      {foodall.map((foodall,index) => (
+        <div className="column is-one-quarter" key={index}>
+          <figure className="image is-4by3">
                   {/* <img src="https://miro.medium.com/max/1200/1*dLaDL-lSN0iprzmOpmM7zQ.png"  /> */}
                   <img src={`http://localhost:8000/pic/${foodall.ReccommendPic}`} alt="Image" />
                 </figure>
-              </div>
-              <div className="newcard_content">
-                    <p className="title is-4">{foodall.ReccommendMenu}</p>
-              </div>
-
-              <footer className="card-footer">
-                <Link to={`edit/${foodall.Reccommendid}`} className="card-footer-item">
-                  Edit
-                </Link>
-                <a
-                  onClick={() => deleteProduct(foodall.Reccommendid)}
-                  className="card-footer-item"
-                >
-                  Delete
-                </a>
-              </footer>
-            </div>
-          </div>
-        ))}
+        </div>
+      ))}
       </div>
-    </div>
+      </div>
     </Scrollbar>
     </div>
     </div>
