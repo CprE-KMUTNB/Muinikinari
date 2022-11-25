@@ -42,7 +42,7 @@ const Normalresult = () => {
                 </div></div>
         <div className='normalresult-image'>
           <div className='normalresult-image-top'>
-            <img src={localStorage.getItem('Foodpic')} alt='kawpad' />
+           
           </div>
                
         </div>
