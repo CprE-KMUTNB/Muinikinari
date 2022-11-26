@@ -118,7 +118,7 @@
     padding-top: 0px; 
     padding-right: 20%; 
     padding-left: 27px;
-    width: 100%; 
+    width: 100vh; 
     z-index: 0;
 }
 
@@ -128,7 +128,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 160vh;
     background: #E7B925;
     clip-path: ellipse(700px 1500px at right 800px)
 

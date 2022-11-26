@@ -119,7 +119,7 @@
     position: absolute;
     right: 0;
     top: -1;
-    width: 100%; 
+    width: 90vh; 
     z-index: 0;
   }
 
@@ -127,18 +127,19 @@
     padding-top: 0px; 
     padding-right: 20%; 
     padding-left: 27px;
-    width: 100%; 
+    width: 90vh; 
+    z-index: 0;
 }
 
 .carni-yellow {
     position: absolute;
-    z-index: -1;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 160vh;
     background: #E7B925;
-    clip-path: ellipse(700px 1500px at right 800px)
+    clip-path: ellipse(700px 1500px at right 800px);
+    z-index: -1;
 
 }
 
@@ -155,7 +156,7 @@
     border-radius: 0;
     padding: 1em;
     cursor: pointer;
-    left: 56%;
+    left: 50%;
     bottom: 15%;
     
 }

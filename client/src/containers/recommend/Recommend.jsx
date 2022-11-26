@@ -57,15 +57,12 @@ const Recommend = () => {
       
       <h1 className='slider_title'>Promotion</h1>
       <ImageSlider />
-      <div className='bestseller-content__space'></div>
-      <h1 className='bestseller_title'>RECOMMEND</h1>
+      <h1 className='bestseller_title' >RECOMMEND</h1>
       <div className='bestseller_pic'>
       <Link to="/add" className="button-is-success"><button>
       Add New
       </button>
       </Link>
-      <div className='recommend-content__input'></div>
-      <div className='media__scroller'>
         <div className='newcard' >
         {foodall.map((foodall,index) => (
         <div className="newcard_image" key={index}>
@@ -93,7 +90,6 @@ const Recommend = () => {
       </div>
       </div>
 
-    </div>
   )
 }
 
