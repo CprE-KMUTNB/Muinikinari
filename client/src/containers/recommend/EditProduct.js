@@ -5,6 +5,7 @@ import Scrollbar from 'react-custom-scrollbars';
 import Button from '@mui/material/Button';
 import ramen from '../../assets/ramen.png'
 import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
 
 const EditProduct = () => {
 
@@ -34,10 +35,12 @@ const EditProduct = () => {
   }
 
   return (
-    <div className="columns is-centered mt-5">
-      <Scrollbar style={{ width: 1850, height: 810 }}>
+    <div><Container component="main" maxWidth="xs">
+      <div className="columns is-centered mt-5">
       <div className="column-is-half">
-      <img src={ramen} alt='ramen' />
+      <img src={ramen} alt='ramen' style={{
+      
+      transform: "translate(20%, 0%)"}}/>
         <form onSubmit={editProduct}>
           <div className="field">
           <Typography component="h1" variant="h5" color="#E7B925" fontFamily={'Poppins'} fontWeight='700' fontSize='30px' alignItems='center'>
@@ -62,7 +65,8 @@ const EditProduct = () => {
             <div className="control">
               <div className="file">
                 <label className="file-label">
-                <img src={url} />
+                <img src={url} 
+                style={{width: "100%", height: "50vh"}}/>
                 <input
                 style={{width: 500, height: 50}}
                 type="text"
@@ -80,28 +84,31 @@ const EditProduct = () => {
 
           <div className="field">
             <div className="control">
-              <input type="submit" value="adddd" />
             <input
     style={{
-        borderRadius: 35,
-        backgroundColor: "#E7B925",
-        padding: "18px 36px",
-        fontSize: "25px",
-        fontFamily: 'Poppins',
-        fontWeight: '700',
-        color: 'black'
+      borderRadius: 35,
+      backgroundColor: "#E7B925",
+      transform: "translate(130%, 25%)",
+      
+      padding: "18px 36px",
+      fontSize: "25px",
+      fontFamily: 'Poppins',
+      fontWeight: '700',
+      color: 'black'
     }}
     type="submit"
               fullWidth
               variant="contained"
-    value="Add"
+    value="Save"
     />
 
             </div>
           </div>
         </form>
-      </div></Scrollbar>
+      </div>
     </div>
+    </Container></div>
+    
   );
   };
 

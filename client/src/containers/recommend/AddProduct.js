@@ -5,6 +5,7 @@ import Scrollbar from 'react-custom-scrollbars';
 import Button from '@mui/material/Button';
 import tomyumm from '../../assets/tomyumm.png'
 import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
 
 const AddProduct = () => {
 
@@ -33,8 +34,9 @@ const AddProduct = () => {
   }
 
   return (
+    <div>
+        <Container component="main" maxWidth="xs">
     <div className="columns is-centered mt-5">
-      <Scrollbar style={{ width: 1850, height: 810 }}>
       <div className="column-is-half">
       <img src={tomyumm} alt='ramen' />
         <form onSubmit={saveProduct}>
@@ -61,7 +63,8 @@ const AddProduct = () => {
             <div className="control">
               <div className="file">
                 <label className="file-label">
-                <img src={url} />
+                <img src={url} 
+                style={{width: "100%", height: "50vh"}}/>
                 <input
                 style={{width: 500, height: 50}}
                 type="text"
@@ -83,6 +86,8 @@ const AddProduct = () => {
     style={{
         borderRadius: 35,
         backgroundColor: "#E7B925",
+        transform: "translate(145%, 25%)",
+        
         padding: "18px 36px",
         fontSize: "25px",
         fontFamily: 'Poppins',
@@ -99,8 +104,8 @@ const AddProduct = () => {
             </div>
           </div>
         </form>
-      </div></Scrollbar>
-    </div>
+      </div>
+    </div></Container></div>
   );
   };
 

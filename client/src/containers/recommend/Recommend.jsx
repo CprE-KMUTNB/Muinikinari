@@ -53,9 +53,8 @@ const Recommend = () => {
   console.log(foodall)
   return (
   
-    <div className='recommend section__margin' >
       <div className='container mt-5 carousel'>
-      <Scrollbar style={{ width: 1900, height: 800 }}>
+      
       <h1 className='slider_title'>Promotion</h1>
       <ImageSlider />
       <div className='bestseller-content__space'></div>
@@ -91,10 +90,9 @@ const Recommend = () => {
         </div>
       )) }
         </div>
-      
-      </div></div>
-    </Scrollbar>
-    </div>
+      </div>
+      </div>
+
     </div>
   )
 }
