@@ -8,9 +8,6 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import  {listRecommend} from "../../components/function"
 
-import ramen from '../../assets/ramen.png'
-
-
 /*จัดหน้าRecommend*/
 /*แก้ไขstyleที่App.scss*/
 const Recommend = () => {
