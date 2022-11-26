@@ -70,7 +70,7 @@ const Recommend = () => {
         <div className='newcard' >
         {foodall.map((foodall,index) => (
         <div className="newcard_image" key={index}>
-          <img src={`http://localhost:8000/pic/${foodall.ReccommendPic}`} alt="Image" />
+          <img src={foodall.ReccommendPic} alt="Image" />
           <div className='newcard_content'>
           <p className="title_is_4">{foodall.ReccommendMenu}</p>
           </div>

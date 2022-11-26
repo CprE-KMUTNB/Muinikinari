@@ -6,55 +6,39 @@ import Button from '@mui/material/Button';
 import ramen from '../../assets/ramen.png'
 import Typography from '@mui/material/Typography';
 
-
 const EditProduct = () => {
-  const [title, setTitle] = useState("");
-  const [file, setFile] = useState("");
-  const [preview, setPreview] = useState("");
-  const { id } = useParams();
-  const navigate = useNavigate();
 
-  useEffect(() => {
-    getProductById();
-  }, []);
+  let { id } = useParams();
 
-  const getProductById = async () => {
-    const response = await axios.get(`http://127.0.0.1:8000/apireview/recommend/${id}`);
-    setTitle(response.data.name);
-    setFile(response.data.image);
-    setPreview(response.data.url);
-  };
+  
 
-  const loadImage = (e) => {
-    const image = e.target.files[0];
-    setFile(image);
-    setPreview(URL.createObjectURL(image));
-  };
-
-  const updateProduct = async (e) => {
-    e.preventDefault();
-    const formData = new FormData();
-    formData.append("file", file);
-    formData.append("title", title);
-    try {
-      await axios.patch(`http://127.0.0.1:8000/apireview/recommend/${id}`, formData, {
-        headers: {
-          "content-type": "multipart/form-data",
-        },
-      });
-      navigate("/");
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
+  const [state, setState] = useState({
+    foodname:'',
+    url:''
+  })
+  
+  const {foodname, url} = state
+  
+  const inputValue = name => event => {
+    setState({ ...state, [name]: event.target.value})
+  }
+  
+  const editProduct = (e) => {
+    e.preventDefault()
+    axios
+    .put(`http://127.0.0.1:8000/apireview/recommend/${id}/`,{ ReccommendMenu:foodname,ReccommendPic:url})
+    .then(response=>{
+      console.log(response)
+    })
+  
+  }
 
   return (
     <div className="columns is-centered mt-5">
       <Scrollbar style={{ width: 1850, height: 810 }}>
       <div className="column-is-half">
       <img src={ramen} alt='ramen' />
-        <form onSubmit={updateProduct}>
+        <form onSubmit={editProduct}>
           <div className="field">
           <Typography component="h1" variant="h5" color="#E7B925" fontFamily={'Poppins'} fontWeight='700' fontSize='30px' alignItems='center'>
           Food Name
@@ -64,9 +48,9 @@ const EditProduct = () => {
                 style={{width: 500, height: 50}}
                 type="text"
                 className="input"
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
                 placeholder="Food Name"
+                value={foodname}
+                onChange ={inputValue('foodname')}
               />
             </div>
           </div>
@@ -78,27 +62,26 @@ const EditProduct = () => {
             <div className="control">
               <div className="file">
                 <label className="file-label">
-                  <input
-                    type="file"
-                    className="file-input"
-                    onChange={loadImage}
-                  />
+                <img src={url} />
+                <input
+                style={{width: 500, height: 50}}
+                type="text"
+                className="input"
+                placeholder="Food Image"
+                value={url}
+                onChange ={inputValue('url')}
+              />
                 </label>
               </div>
             </div>
           </div>
 
-          {preview ? (
-            <figure className="image is-128x128">
-              <img src={preview} alt="Preview Image" />
-            </figure>
-          ) : (
-            ""
-          )}
+          
 
           <div className="field">
             <div className="control">
-            <Button
+              <input type="submit" value="adddd" />
+            <input
     style={{
         borderRadius: 35,
         backgroundColor: "#E7B925",
@@ -111,16 +94,18 @@ const EditProduct = () => {
     type="submit"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 2 }}
-    >
-    Update
-</Button>
+    value="Add"
+    />
+
             </div>
           </div>
         </form>
       </div></Scrollbar>
     </div>
   );
-};
+  };
 
-export default EditProduct;
+
+
+
+export default EditProduct
