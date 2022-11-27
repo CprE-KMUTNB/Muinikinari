@@ -21,6 +21,16 @@ body::-webkit-scrollbar-thumb {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
 ​
+.title_is_4 {
+  font-size: 70px;
+    letter-spacing: -0.017em;
+    color: #E7B925;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2vw;
+    filter: contrast();
+}
+
 .bestseller-content__space {
     width: 100%;
     margin: 12rem 0 1rem;
