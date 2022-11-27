@@ -58,9 +58,7 @@ const Recommend = () => {
       <h1 className='slider_title'>Promotion</h1>
       <ImageSlider />
       <h1 className='bestseller_title' >RECOMMEND
-      <Link to="/add" className="button-is-success"><button>
-      Add
-      </button>
+      <Link to="/add" className="button-is-success"><button>+</button>
       </Link>
       </h1>
 
@@ -70,8 +68,11 @@ const Recommend = () => {
       </button>
       </Link> */}
         <div className='newcard' >
-        
-        
+        <img src={ramen} alt='ramen'/>
+        <img src={ramen} alt='ramen'/>
+        <img src={ramen} alt='ramen'/>
+        <img src={ramen} alt='ramen'/>
+
         {foodall.map((foodall,index) => (
         <div className="newcard_image" key={index}>
           <img src={foodall.ReccommendPic} alt="Image" />
