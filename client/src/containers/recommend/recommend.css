@@ -20,16 +20,12 @@ body::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
-​
+
+
 .title_is_4 {
-  font-size: 70px;
-    letter-spacing: -0.017em;
-    color: #E7B925;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 2vw;
-    filter: contrast();
+  display: flex;
 }
+
 
 .bestseller-content__space {
     width: 100%;
