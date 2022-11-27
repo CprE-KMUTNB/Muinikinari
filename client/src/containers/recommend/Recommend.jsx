@@ -68,10 +68,6 @@ const Recommend = () => {
       </button>
       </Link> */}
         <div className='newcard' >
-        <img src={ramen} alt='ramen'/>
-        <img src={ramen} alt='ramen'/>
-        <img src={ramen} alt='ramen'/>
-        <img src={ramen} alt='ramen'/>
 
         {foodall.map((foodall,index) => (
         <div className="newcard_image" key={index}>

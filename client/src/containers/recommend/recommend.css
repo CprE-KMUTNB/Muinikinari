@@ -58,18 +58,17 @@ body::-webkit-scrollbar-thumb {
 
 .button-is-success button{
     flex: 1;
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     background-color: transparent;
     display: block;
     border-radius: 50%;
     border-color: #E7B925;
     background-color: #E7B925;
-    font-size: 8vh;
+    font-size: 7vh;
     font-family: var(--font-family);
     font-weight: 700;
     line-height: 40px;
-
     
     color: white;
     cursor: pointer;
