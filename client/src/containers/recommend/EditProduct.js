@@ -63,11 +63,10 @@ const EditProduct = () => {
           <Typography component="h1" variant="h5" color="#E7B925" fontFamily={'Poppins'} fontWeight='700' fontSize='30px'>
           Image
           </Typography>
-            <div className="control">
+          <div className="control">
               <div className="file">
                 <label className="file-label">
-                <img src={url} 
-                style={{width: "100%", height: "25vh"}}/>
+                
                 <input
                 style={{width: 500, height: 50}}
                 type="text"
@@ -77,6 +76,8 @@ const EditProduct = () => {
                 onChange ={inputValue('url')}
               />
                 </label>
+                {url? (<img src={url} 
+                style={{width: "100%", height: "25vh"}}/>):null}
               </div>
             </div>
           </div>

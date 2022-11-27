@@ -63,8 +63,7 @@ const AddProduct = () => {
             <div className="control">
               <div className="file">
                 <label className="file-label">
-                <img src={url} 
-                style={{width: "100%", height: "25vh"}}/>
+                
                 <input
                 style={{width: 500, height: 50}}
                 type="text"
@@ -74,6 +73,8 @@ const AddProduct = () => {
                 onChange ={inputValue('url')}
               />
                 </label>
+                {url? (<img src={url} 
+                style={{width: "100%", height: "25vh"}}/>):null}
               </div>
             </div>
           </div>
