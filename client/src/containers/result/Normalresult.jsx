@@ -38,8 +38,8 @@ const Normalresult = () => {
       <div className='normalresult-content'>
         
         <div className='normalresult-content__input'>
-          <h1>{localStorage.getItem('Foodname')}</h1>
-          <h1>{localStorage.getItem('Foodres')}</h1>  
+          <h1>ชื่อเมนู : {localStorage.getItem('Foodname')}</h1>
+          <h1>ร้านอาหาร : {localStorage.getItem('Foodres')}</h1>  
                 <Link to='/normal'><button>Back to random page</button></Link>
                 </div></div>
         <div className='normalresult-image'>
