@@ -57,18 +57,20 @@ const Recommend = () => {
       
       <h1 className='slider_title'>Promotion</h1>
       <ImageSlider />
-      <h1 className='bestseller_title' >RECOMMEND</h1>
-      <div className='bestseller_pic'>
+      <h1 className='bestseller_title' >RECOMMEND
       <Link to="/add" className="button-is-success"><button>
-      Add New
+      Add
       </button>
       </Link>
+      </h1>
+
+      <div className='bestseller_pic'>
+      {/* <Link to="/add" className="button-is-success"><button>
+      Add New
+      </button>
+      </Link> */}
         <div className='newcard' >
-        {/* <img src={ramen} alt='ramen'></img>
-        <img src={ramen} alt='ramen'></img>
-        <img src={ramen} alt='ramen'></img>
-        <img src={ramen} alt='ramen'></img>
-        <img src={ramen} alt='ramen'></img> */}
+        
         
         {foodall.map((foodall,index) => (
         <div className="newcard_image" key={index}>

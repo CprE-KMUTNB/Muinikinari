@@ -49,8 +49,8 @@ body::-webkit-scrollbar-thumb {
 .button-is-success {
   margin: 0;
   position: absolute;
-  top: 105%;
-  left: 50%;
+  top: 35%;
+  left: 75%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   
@@ -58,20 +58,20 @@ body::-webkit-scrollbar-thumb {
 
 .button-is-success button{
     flex: 0.6;
-    width: 200px;
+    width: 100px;
     min-width: 50px;
     
     background-color: transparent;
     border-radius: 50px;
     border-color: #E7B925;
     background-color: #E7B925;
-    font-size: 25px;
+    font-size: 15px;
     font-family: var(--font-family);
     font-weight: 700;
-    line-height: 60px;
+    line-height: 40px;
 
     letter-spacing: -0.017em;
-    color: black;
+    color: white;
     cursor: pointer;
     outline: none;
     padding: 0 1rem;
