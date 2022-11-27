@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 
 const EditProduct = () => {
-
+  const navigate = useNavigate()
   let { id } = useParams();
 
   
@@ -29,6 +29,7 @@ const EditProduct = () => {
     axios
     .put(`http://127.0.0.1:8000/apireview/recommend/${id}/`,{ ReccommendMenu:foodname,ReccommendPic:url})
     .then(response=>{
+      navigate("/recommend")
       console.log(response)
     })
   
