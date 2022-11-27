@@ -67,7 +67,7 @@ const EditProduct = () => {
               <div className="file">
                 <label className="file-label">
                 <img src={url} 
-                style={{width: "100%", height: "50vh"}}/>
+                style={{width: "100%", height: "25vh"}}/>
                 <input
                 style={{width: 500, height: 50}}
                 type="text"
